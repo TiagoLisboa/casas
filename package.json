@@ -1,0 +1,22 @@
+{
+  "name": "casas",
+  "version": "1.0.0",
+  "description": "ambiente RESTful para armazenamento de dados sobre consumo de eletricidade de casas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiagoLisboa/casas.git"
+  },
+  "author": "tiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TiagoLisboa/casas/issues"
+  },
+  "homepage": "https://github.com/TiagoLisboa/casas#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
