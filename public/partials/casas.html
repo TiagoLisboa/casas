@@ -1,0 +1,12 @@
+<input type="search" ng-model="filtro">
+<a ng-href="#/casa">Nova Casa</a>
+<hr>
+<table>
+	<tr><th>id</th><th>proprietário</th><th>registros</th><th>editar</th></tr>
+	<tr ng-repeat="casa in casas | filter:filtro">
+		<td>{{ casa._id }}</td>
+		<td>{{ casa.proprietario }}</td>
+		<td>{{ casa.registros }}</td>
+		<td><a ng-href="#/casa/{{ casa._id }}">!</a></td>
+	</tr>
+</table>

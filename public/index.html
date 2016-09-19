@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="casas">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+
+	<script src='vendor/angular/angular.js'></script>
+	<script src='vendor/angular-route/angular-route.js'></script>
+
+	<script src='js/main.js'></script>
+	<script src='js/controllers/CasasController.js'></script>
+	<script src='js/controllers/CasaController.js'></script>
 </head>
 <body>
-	<p>asdfasdf</p>
+	<div ng-view></div>
 </body>
 </html>

@@ -1,9 +1,7 @@
 module.exports = function () {
 
 	var casas = [
-		{'_id': 0, 'proprietario':'jose','registros': [1,2,3]},
-		{'_id': 1, 'proprietario':'maria','registros': [1,2,3]},
-		{'_id': 2, 'proprietario':'josefa','registros': [1,2,3]},
+		{'_id': 0, 'proprietario':'jose','registros': [{data: "2016-09-12", hora: "12:00", valor: 25}, {data: "2016-09-12", hora: "12:10", valor: 15}, {data: "2016-09-12", hora: "12:20", valor: 20}]},
 	];
 
 	var ID_CASA_NXT = casas.length;
@@ -19,6 +17,7 @@ module.exports = function () {
 		const casa = casas.filter(function(index) {
 			return index._id == idCasa;
 		})[0];
+		console.log(casa);
 
 		casa ? res.json(casa):
 		res.status(404).send('casa não encontrada');
@@ -26,9 +25,7 @@ module.exports = function () {
 
 	controller.salvaCasa = function (req,res) {
 		let casa = req.body;
-		casa = casa._id ? 
-				atualiza(casa) :
-				adicionar(casa);
+		casa = casa._id+1 ? atualizar(casa) : adicionar(casa);
 	};
 
 	controller.removeCasa = function (req,res) {

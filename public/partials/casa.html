@@ -1,0 +1,23 @@
+
+<form ng-submit="salva()">
+	<input type="text" ng-model="casa._id" style="display: none">
+	<label>Proprietário: 
+		<input type="text" ng-model="casa.proprietario">
+	</label>
+
+	<table>
+		<tr><th>Registro</th><th>Data</th> <th>Hora</th> <th>Valor</th></tr>
+		<tr ng-repeat="registro in casa.registros track by $index">
+			<td> {{ $index }}</td>
+			<td><input type="text" ng-model="registro.data"></td>
+			<td><input type="text" ng-model="registro.hora"></td>
+			<td><input type="text" ng-model="registro.valor"></td>
+		</tr>
+		<tr><button ng-click="addLinha();">+</button></tr>
+	</table>
+
+	<button type="submit">Submeter</button>
+
+</form>
+<hr>
+<a ng-href="#/casas">VOLTAR</a>
