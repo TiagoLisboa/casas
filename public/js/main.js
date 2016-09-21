@@ -1,4 +1,4 @@
-angular.module('casas', ['ngRoute'])
+angular.module('casas', ['ngRoute', 'chart.js'])
 	.config(function($routeProvider) {
 		$routeProvider.when('/casas', {
 			templateUrl: 'partials/casas.html',
