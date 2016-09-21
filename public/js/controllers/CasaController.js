@@ -3,16 +3,20 @@ angular.module("casas").controller('CasaController', function ($scope, $routePar
 
 	$scope.filtro = "";
 
-	$http.get('/casas/'+$routeParams.idCasa)
-		.then(
-			function (res){
-				$scope.casa = res.data;
-				$interval(function () {entRand();}, 10000)
-			},
-			function (erro){
-				console.log(erro);
-			}
-		);
+	$scope.carrega();
+
+	$scope.carrega = function () {
+		$http.get('/casas/'+$routeParams.idCasa)
+			.then(
+				function (res){
+					$scope.casa = res.data;
+					// $interval(function () {entRand();}, 10000)
+				},
+				function (erro){
+					console.log(erro);
+				}
+			);
+	}
 
 	$scope.salva = function (){
 		var data = {

@@ -27,6 +27,11 @@ module.exports = function () {
 		casa = casa._id+1 ? atualizar(casa) : adicionar(casa);
 	};
 
+	controller.salvaRegistro = function (req, res) {
+		const registro = req.body;
+		const casas = inserirRegistro(registro);
+	}
+
 	controller.removeCasa = function (req,res) {
 		const idCasa = req.params.id;
 		const casa = casas.filter(function(index) {
@@ -47,6 +52,18 @@ module.exports = function () {
 
 		return casaNv;
 	};
+
+	function inserirRegistro (registro) {
+		registro.registros[0].date = new Date();
+		console.log(registro.registros[0]);
+		casas = casas.map(function(casa) {
+			if (registro._id == casa._id) {
+				casa.registros.push(registro.registros[0]);
+			}
+			return casa;
+		})
+		return casas;
+	}
 
 	function adicionar (casaNv) {
 		casaNv._id = ID_CASA_NXT++;

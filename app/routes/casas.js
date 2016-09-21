@@ -11,4 +11,7 @@ module.exports = function (app) {
 	app.route('/casas/:id')
 		.get(controller.veCasa)
 		.delete(controller.removeCasa);
+
+	app.route('/casas/registro')
+		.post(controller.salvaRegistro);
 }
