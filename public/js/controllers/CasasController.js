@@ -9,6 +9,7 @@ angular.module("casas").controller('CasasController', function ($scope, $routePa
 		.then(
 			function (res){
 				$scope.casas = res.data;
+				console.log($scope.casas);
 			},
 			function (erro){
 				console.log(erro);

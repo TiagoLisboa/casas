@@ -1,28 +1,19 @@
+<div class="col-sm-10 col-sm-offset-2">
+	<header>
+		<h1>Consumo em tempo real</h1>
 
-<canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-click="onClick">
-</canvas> 
-<!-- 
-<form ng-submit="salva()">
-	<input type="text" ng-model="casa._id" style="display: none">
-	<label>Proprietário: 
-		<input type="text" ng-model="casa.proprietario">
-	</label>
+		<hr />
 
+		<ul class="nav nav-tabs">
+			<li role="presentation" class="active"><a href="">Tensão</a></li>
+			<li role="presentation"><a href="">Corrente</a></li>
+			<li role="presentation"><a href="">Potência</a></li>
+		</ul>
+	</header>
 
-	<table>
-		<tr><th>Registro</th><th>Data</th> <th>Hora</th> <th>Valor</th></tr>
-		<tr ng-repeat="registro in casa.registros track by $index">
-			<td> {{ $index }}</td>
-			<td><input type="text" ng-model="registro.data"></td>
-			<td><input type="text" ng-model="registro.hora"></td>
-			<td><input type="text" ng-model="registro.valor"></td>
-		</tr>
-		<tr><button ng-click="addLinha();">+</button></tr>
-	</table>
-
-	<button type="submit">Submeter</button>
-
-</form> -->
-	
-<hr>
-<a ng-href="#/casas">VOLTAR</a>
+	<epoch-live-line chart-height="300" chart-data="opcoes" chart-stream="stream" chart-range="
+	[0, 200]" chart-axes="['left','bottom']"></epoch-live-line>
+		
+	<hr>
+	<a ng-href="#/casas">VOLTAR</a>
+</div>
