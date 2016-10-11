@@ -1,0 +1,37 @@
+img {
+	max-width: 100%;
+}
+
+.barra-nav {
+	position: fixed;
+		top: 0;
+		bottom: 0;
+	
+	padding: 0;
+	
+	background-color: #28768D;
+}
+	.barra-nav a{
+		color: #E8E8E8;
+	}
+
+	.caixa-usuario {
+		display: table;
+
+		padding: 20px;
+			padding-top: 40px;
+
+		background-color: rgba(0,0,0,0.3);
+	}
+		.icone {
+			width: 40%;
+			margin-bottom: 5px;
+		}
+		.icone img{
+			border-radius: 100%;
+		}
+	.nav{}
+		.barra-nav .nav li {
+			width: 100%;
+			background-color: rgba(0,0,0,0.1);
+		}
